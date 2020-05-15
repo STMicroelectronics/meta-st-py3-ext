@@ -6,6 +6,9 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0;md5=80
 SRC_URI = "file://how2eldb03110.elf"
 
 do_install () {
+    install -d ${D}/lib/
     install -d ${D}/lib/firmware/
     install -m 0777  ${WORKDIR}/how2eldb03110.elf  ${D}/lib/firmware/
 }
+
+FILES_${PN} += " /lib/firmware/"
