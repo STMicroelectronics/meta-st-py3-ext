@@ -1,6 +1,6 @@
 # meta-st-py3-ext
 
-meta-st-py3-ext is a meta layer for Linux Yocto based distributions for the STMicroelectronics STM32MP1 architecture, to get started with Python 3 and the Mp1AmpSTSDK, which allows the communication between the A7 and the M4 cores (see “meta-meta-st-py3-ext/conf/layer.conf” file for further details on the packages installed).
+meta-st-py3-ext is a meta layer for Linux Yocto based distributions for the STMicroelectronics STM32MP1 architecture, to get started with Python 3 and the Mp1AmpSTSDK, which make easyer the communication between the A7 and the M4 cores for python developpers (see “meta-meta-st-py3-ext/conf/layer.conf” file for further details on the packages installed).
 
 
 ## Installation
@@ -21,6 +21,21 @@ Copy and paste the following line within the “bblayers.conf” file, just befo
   ```Shell
   $ FRAMEWORKLAYERS += "${@'${OEROOT}/layers/meta-st-py3-ext' if os.path.isfile('${OEROOT}/layers/meta-st-py3-ext/conf/layer.conf') else ''}"
   ```
+Or alternatively this layer could be added automatically (after having cloned it) entering the following bitbake command:
+  ```Shell
+  $ cd <path-to>/openstlinux-<version>/layers
+  ```
+  ```Shell
+  $ bitbake-layers add-layer meta-st-py3-ext
+  ```
+  To check the layer was added succesfully:
+  ```Shell
+  $ bitbake-layers show-layers
+  ```
+
+
+  
+  
 You can now build your distribution with BitBake.
 
 
