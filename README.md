@@ -23,10 +23,10 @@ Copy and paste the following line within the “bblayers.conf” file, just befo
   ```
 Or alternatively this layer could be added automatically (after having cloned it) entering the following bitbake command:
   ```Shell
-  $ cd <path-to>/openstlinux-<version>/layers
+  $ cd <path-to>/openstlinux-<version>/build-openstlinuxweston-smt32mp1-av96
   ```
   ```Shell
-  $ bitbake-layers add-layer meta-st-py3-ext
+  $ bitbake-layers add-layer ../layers/meta-st-py3-ext
   ```
   To check the layer was added succesfully:
   ```Shell
