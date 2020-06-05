@@ -1,6 +1,7 @@
 # meta-st-py3-ext
 
-meta-st-py3-ext is a meta layer for Linux Yocto based distributions for the STMicroelectronics STM32MP1 architecture, to get started with Python 3 and the Mp1AmpSTSDK, which make easyer the communication between the A7 and the M4 cores for python developpers (see “meta-meta-st-py3-ext/conf/layer.conf” file for further details on the packages installed).
+meta-st-py3-ext is a meta layer for Linux Yocto based distributions for the STMicroelectronics STM32MP1 architecture, to get started with Python 3 and the Mp1AmpSTSDK (https://github.com/mapellil/Mp1AmpSTSDK_Python , https://pypi.org/project/mp1ampstsdk/), which make easyer the communication between the A7 and the M4 cores for python developpers (see “meta-meta-st-py3-ext/conf/layer.conf” file for further details on the packages installed). 
+The layer includes the stm32_rpmsg_sdb.ko experimental external kernel object, this kernel module, which is the kernel side support for the Mp1AmpSTSDK python3 package, it is not loaded into the kernel tree at boot (see the "insmod" command). The user side APIs counterpart are the libsdbsdk.so which is part of the Mp1AmpSTSDK.
 
 
 ## Installation
