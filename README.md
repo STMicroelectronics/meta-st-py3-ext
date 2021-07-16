@@ -1,7 +1,10 @@
 # meta-st-py3-ext
 
-meta-st-py3-ext is a meta layer for Linux Yocto based distributions for the STMicroelectronics STM32MP1 architecture, to get started with Python 3 and the Mp1AmpSTSDK (https://github.com/mapellil/Mp1AmpSTSDK_Python , https://pypi.org/project/mp1ampstsdk/), which make easyer the communication between the A7 and the M4 cores for python developpers (see “meta-meta-st-py3-ext/conf/layer.conf” file for further details on the packages installed). 
-The layer includes the stm32_rpmsg_sdb.ko experimental external kernel object, this kernel module, which is the kernel side support for the Mp1AmpSTSDK python3 package, it is not loaded into the kernel tree at boot (see the "insmod" command). The user side APIs counterpart are in the libsdbsdk.so which is part of the Mp1AmpSTSDK python3 package (see .
+meta-st-py3-ext is a meta layer for Linux Yocto based distributions running on the STMicroelectronics STM32MP1 architecture, to get started with Python 3 and the Mp1AmpSTSDK (https://github.com/STMicroelectronics/Mp1AmpSTSDK_Python , https://pypi.org/project/mp1ampstsdk/), which make easyer the communication between the A7 and the M4 cores for python developpers (see “meta-meta-st-py3-ext/conf/layer.conf” file for further details on the packages installed). 
+The layer includes the stm32_rpmsg_sdb.ko experimental external kernel object, this kernel module, which is the kernel side support for the Mp1AmpSTSDK python3 package, it is not loaded into the kernel tree at boot (see the "insmod" command). The user side APIs counterpart are in the libsdbsdk.so which is part of the Mp1AmpSTSDK python3 package.
+
+
+The layer meta-st-py3-ext is compiled with the openstlinux-5.10-dunfell-mp1 distribution for the STM32MP157x-DK2 evaluation board. This layer is meant for the "STM32-MP1 Distribution Kit" for more details see the ST wiki https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package
 
 
 ## Installation
@@ -14,7 +17,7 @@ Clone the GitHub repository:
   ```Shell
   $ git clone https://github.com/STMicroelectronics/meta-st-py3-ext
   ```
-Enter the configuration folder, e.g.:
+To add this layer to build enter the configuration folder, e.g.:
   ```Shell
   $ cd <path-to>/openstlinux-<version>/build-openstlinuxweston-stm32mp1/conf/
   ```
@@ -24,7 +27,7 @@ Copy and paste the following line within the “bblayers.conf” file, just befo
   ```
 Or alternatively this layer could be added automatically (after having cloned it) entering the following bitbake command:
   ```Shell
-  $ cd <path-to>/openstlinux-<version>/build-openstlinuxweston-smt32mp1-av96
+  $ cd <path-to>/openstlinux-<version>/build-openstlinuxweston-stm32mp1
   ```
   ```Shell
   $ bitbake-layers add-layer ../layers/meta-st-py3-ext
@@ -37,7 +40,7 @@ Or alternatively this layer could be added automatically (after having cloned it
 
   
   
-You can now build your distribution with BitBake.
+You can now build your distribution with BitBake following the wiki instructions https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package
 
 
 ## License
