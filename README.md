@@ -6,6 +6,9 @@ The layer includes the stm32_rpmsg_sdb.ko experimental external kernel object, t
 
 The layer meta-st-py3-ext is compiled with the openstlinux-5.10-dunfell-mp1 distribution for the STM32MP157x-DK2 evaluation board. This layer is meant for the "STM32-MP1 Distribution Kit" for more details see the ST wiki https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package
 
+A more comprehensive description helping in the A7-M4 communication can be found here https://wiki.st.com/stm32mpu/wiki/How_to_exchange_data_buffers_with_the_coprocessor at chapter 7 can be found a description of tty and sdb linux driver.
+
+
 
 ## Installation
 The meta-st-py3-ext layer can be download to a PC from its GitHub repository.
